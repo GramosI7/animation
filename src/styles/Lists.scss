@@ -1,0 +1,19 @@
+@import "./utils/variables";
+
+.container-skills {
+  height: 250vh;
+  position: relative;
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 52px;
+    padding-top: 30px;
+    text-transform: uppercase;
+  }
+  .lists {
+    list-style: none;
+    font-size: 32px;
+    font-weight: bold;
+    height: 100%;
+  }
+}

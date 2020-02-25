@@ -1,0 +1,25 @@
+@import "./styles/utils/variables";
+
+@font-face {
+  font-family: "Monument Extended";
+  src: local("Monument Extended"), url("./fonts/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+  font-family: "Monument Extended Bold";
+  src: local("Monument Extended"), url("./fonts/MonumentExtended-Ultrabold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "Monument Extended", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

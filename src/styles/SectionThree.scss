@@ -1,0 +1,104 @@
+@import "./utils/variables";
+
+.section-3 {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  h1 {
+    font-size: 52px;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    cursor: pointer;
+    width: 30%;
+    height: 250px;
+    position: absolute;
+    &.wrapper-1 {
+      top: 15%;
+      left: 5%;
+    }
+    &.wrapper-2 {
+      top: 15%;
+      right: 10%;
+    }
+    &.wrapper-3 {
+      bottom: 7%;
+      right: 10%;
+    }
+    &.wrapper-4 {
+      bottom: 7%;
+      left: 5%;
+    }
+    &.wrapper-5 {
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-59%, 50%);
+    }
+    .inner {
+      position: relative;
+      height: 100%;
+      .wrapper-img {
+        width: 100%;
+        height: 100%;
+      }
+      .title {
+        position: absolute;
+        top: 20%;
+        left: 76%;
+        h2 {
+          position: relative;
+          font-size: 52px;
+          color: $primary;
+          text-transform: uppercase;
+          mix-blend-mode: difference;
+          &::after,
+          ::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 102%;
+            height: 100%;
+          }
+          &::before {
+            left: 4px;
+            text-shadow: -31px 0 rgb(0, 174, 255);
+            background: $secondary;
+            clip: rect(54px, 250px, 56px, 40px);
+            animation: noise-anim 2s infinite linear alternate-reverse;
+          }
+          &::after {
+            left: -3px;
+            text-shadow: -3px 0 blue;
+            background: $secondary;
+            animation: noise-anim 2s infinite linear alternate-reverse;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+  }
+}
