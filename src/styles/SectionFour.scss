@@ -1,0 +1,69 @@
+@import "./utils/variables";
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.sectionFour {
+  background-color: #161616;
+  overflow-x: hidden;
+  .navigation-wrapper {
+    .project-preview-wrapper {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      .project-preview {
+        position: fixed;
+        top: 12%;
+        left: 50%;
+        width: 0px;
+        height: 400px;
+        background: url(../assets/img_one.jpg) no-repeat 50% 50%;
+        background-size: cover;
+        overflow: hidden;
+      }
+    }
+    ul {
+      margin-top: 240px;
+      margin-left: 100px;
+      margin-bottom: 100px;
+      list-style: none;
+      li {
+        display: block;
+        user-select: none;
+        margin: 120px 0;
+        width: fit-content;
+        a {
+          font-size: 100px;
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.3);
+          span {
+            position: relative;
+            display: block;
+            &:hover::before {
+              width: 100%;
+            }
+            &::before {
+              width: 0;
+              color: white;
+              overflow: hidden;
+              position: absolute;
+              content: attr(data-text);
+              transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+            }
+          }
+        }
+      }
+    }
+  }
+  .progressbar {
+    position: fixed;
+    top: 0;
+    left: 85%;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 1px;
+    z-index: 1;
+  }
+}

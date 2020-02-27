@@ -1,0 +1,22 @@
+.navigation {
+  position: absolute;
+  right: 60px;
+  bottom: 40px;
+  font-size: 28px;
+  .line {
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+    &:hover a {
+      color: red;
+    }
+    a {
+      mix-blend-mode: difference;
+      display: block;
+      text-decoration: none;
+      color: white;
+      transform: translateY(40px);
+      transition: 0.4s ease;
+    }
+  }
+}
